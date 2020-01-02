@@ -1,0 +1,113 @@
+body {
+  font-size: .95em;
+  -webkit-print-color-adjust: exact;
+}
+
+a[href]:after {
+  content: none !important;
+}
+
+#photo{
+  display: none;
+}
+
+.box {
+  margin-bottom: -10px;
+}
+
+blockquote,
+#education,
+#awards,
+.box {
+  page-break-inside: avoid;
+}
+
+.col-sm-5{
+  padding: 0 15px;
+}
+
+.col-sm-7{
+  padding: 0 15px;
+}
+
+.box h2{
+	color: #227c74 !important;
+}
+.box h2 .fa:before {
+	color: #227c74 !important;
+}
+.contact-item .icon {
+  background: #eee !important;
+}
+.contact-item .icon .fa:before {
+  color: #32475c !important;
+}
+.job .details {
+    background: #eee !important;
+}
+#awards .description, #education .description {
+    background: #eee !important;
+}
+.skill-level {
+    background-color: #227c74 !important;
+    color: #fff !important;
+}
+.interest, .skill {
+    color: #fff !important;
+    background: #32475c !important;
+}
+
+.skills .col-sm-offset-1,
+.interests .col-sm-offset-1{
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+#education {
+  margin: 0;
+  margin-bottom: -20px;
+}
+#awards:before,
+#education:before {
+  background: none;
+}
+
+#awards .description,
+#education .description,
+.job .details {
+  border: 1px solid #eee;
+}
+.publication,
+.publication .panel-heading,
+.publication .name{
+  margin: 0;
+  padding: 0 5px;
+  border: none;
+}
+.publication .panel-body {
+  padding: 0 10px;
+  margin: 0;
+}
+
+.badge {
+  margin: 0;
+}
+
+.list-group-item{
+  border: none;
+  margin: 0;
+  padding: 5px 15px;
+}
+.list-group-item:after{
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 0;
+  left: -1px;
+  height: 0;
+  width: 0;
+  border: solid transparent;
+  border-right-color: #999;
+  border-width: 4px;
+  pointer-events: none;
+ }
