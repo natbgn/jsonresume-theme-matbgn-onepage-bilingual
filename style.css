@@ -6,43 +6,56 @@
 @-o-viewport        { width: device-width; }
 @viewport           { width: device-width; }
 
-body{
+body {
   font-family: 'Open Sans', Arial, Tahoma;
   font-weight: 400;
   font-size: 12px;
   color: #363636;
   background: #334960;
 }
+
 blockquote {
   font-size: 1em;
 }
 
+@page {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@page:first {
+  margin-top: 0;
+}
+
+.main-body {
+}
+
 .col-sm-5 {
-    width: 40.0%;
+  width: 40.0%;
 }
 
 .col-sm-7 {
-    width: 60.0%;
+  width: 60.0%;
 }
 
 .col-sm-offset-1 {
-    margin-left: 8.0%;
+  margin-left: 8.0%;
 }
 
 .col-sm-12 {
-    width: 92%;
+  width: 92%;
 }
 
 .container{
   margin-top: 80px;
-  margin-bottom: 15px;
   background: #fff;
 }
 
-#photo-header{
+#photo-header {
   margin-top: -75px;
 }
-#photo{
+
+#photo {
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -51,12 +64,14 @@ blockquote {
   background: #fff;
   display: inline-block;
 }
-#photo img{
+
+#photo img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
-#text-header h1{
+
+#text-header h1 {
   margin: 0;
   padding: 0;
   font-size: 1.5em;
@@ -64,19 +79,23 @@ blockquote {
   text-transform: uppercase;
   letter-spacing: -1px;
 }
-#text-header h1::first-line{
+
+#text-header h1::first-line {
   font-size: 1.5em;
   font-weight: 800;
   line-height: 1.5em;
 }
-#text-header h1 span{
+
+#text-header h1 span {
   color: #334960;
   opacity: 0.7;
 }
-#text-header h1 sup{
+
+#text-header h1 sup {
   opacity: 0.5;
 }
-#text-header:after{
+
+#text-header:after {
   width: 100%;
   height: 3px;
   border-bottom: 1px solid #ddd;
@@ -85,11 +104,11 @@ blockquote {
   display: block;
 }
 
-.box{
+.box {
   padding-bottom: 10px;
   margin-bottom: 25px;
 }
-.box h2{
+.box h2 {
   color: #227c74;
   font-size: 1.5em;
   font-weight: 700;
@@ -97,13 +116,14 @@ blockquote {
 }
 
 #awards,
-#education{
+#education {
   margin-top: 20px;
   margin-bottom: 0;
   position: relative;
   padding: 1em 0;
   list-style: none;
 }
+
 #awards:before,
 #education:before {
   width: 5px;
@@ -122,23 +142,26 @@ blockquote {
   background: linear-gradient(to bottom,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
 }
+
 #awards li,
-#education li{
+#education li {
   width: 100%;
   z-index: 2;
   position: relative;
   float: left;
 }
+
 #awards .year,
-#education .year{
+#education .year {
   width: 14%;
   background: #fff;
   padding: 10px;
   font-weight: 700;
   display: inline-block;
 }
+
 #awards .description,
-#education .description{
+#education .description {
   width: 83%;
   display: inline-block;
   background: #eee;
@@ -148,6 +171,7 @@ blockquote {
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
+
 #awards .description:after,
 #education .description:after {
   content: '';
@@ -162,22 +186,25 @@ blockquote {
   border-width: 8px;
   pointer-events: none;
 }
+
 #awards .description h3,
-#education .description h3{
+#education .description h3 {
   font-size: 1.2em;
   margin: 0;
   padding: 0;
   font-weight: 700;
 }
+
 #awards .description p,
-#education .description p{
+#education .description p {
   margin-top: 5px;
   padding: 0;
 }
 
-.job{
+.job {
   margin-bottom: 15px;
 }
+
 .job .details {
   margin-left: 3%;
   width: 95%;
@@ -187,74 +214,89 @@ blockquote {
   border-bottom: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-.job .where{
+
+.job .where {
   font-size: 1.2em;
   font-weight: bold;
 }
-.job .year{
+
+.job .year {
   opacity: 0.7;
 }
-.job .profession{
+
+.job .profession {
   font-size: 1.2em;
   font-weight: bold;
 }
-.job .description{
+
+.job .description {
   line-height: 1.5em;
 }
-.job .highlights{
+
+.job .highlights {
   padding: 5px 0;
   font-weight: bold;
 }
+
 .job .job-details {
   padding-left: 5%;
   width: 100%;
 }
+
 .publication {
   margin-bottom: 0;
 }
-.publication .name{
+
+.publication .name {
   font-size: 1em;
   font-weight: bold;
 }
-.publication .year{
+
+.publication .year {
     opacity: 0.7;
 }
-.publication p{
+
+.publication p {
   margin: 0;
   padding-top: 10px;
 }
 
-.contact-item{
+.contact-item {
   width: 100%;
   float: left;
 }
-.contact-item .icon{
+
+.contact-item .icon {
   padding: 10px;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   color: #32475c;
   background: #eee;
 }
-.contact-item:last-child .icon{
-  border-bottom: none;
-}
-.contact-item .title{
+
+.contact-item .title {
   width: 80%;
   width: calc(100% - 55px);
   font-weight: 700;
   opacity: 0.9;
 }
-.contact-item .title.only{
+
+.contact-item .title.only {
   margin-top: 10px;
 }
-.contact-item .description{
+
+.contact-item .description {
   width: 80%;
   width: calc(100% - 55px);
   color: #334960;
 }
 
+.list-group-item {
+  break-inside: avoid-page;
+}
+
 .item-interests,
-.item-skills{
+.item-skills {
   height: 30px;
   color: #334960;
   padding: 5px 10px;
@@ -265,8 +307,9 @@ blockquote {
   font-size: 1.1em;
   font-weight: 600;
 }
+
 .interest,
-.skill{
+.skill {
   color: #fff;
   display: inline-block;
   margin-right: 5px;
@@ -276,6 +319,7 @@ blockquote {
   position: relative;
   font-size: .85em;
 }
+
 .skill-level {
   background-color: #227c74;
   border-radius: 4px;
@@ -286,7 +330,7 @@ blockquote {
   margin: 1px 10px;
 }
 
-#language-skills .skill{
+#language-skills .skill {
   margin: 10px 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
