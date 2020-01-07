@@ -278,15 +278,25 @@
           </div>
           {{/interestsBool}}
           {{#referencesBool}}
+          <!-- REFERENCES -->
           <div class="box">
             <h2><i class= "fa fa-check-square ico"></i> References</h2>
             {{#references}}
-            <blockquote>
-              <div>{{{reference}}}</div>
-              <footer>
-                <a href="{{website}}" target= "_blank">{{name}}</a>
-              </footer>
-            </blockquote><br>
+            <div id= "reference-group">
+              <blockquote class="reference">
+                <div class= "name">{{{name}}}</div>
+                {{#detailsBool}}
+                <div>
+                  <span class= "company">{{{company}}} - </span>
+                  <span class= "title">{{{title}}}</span>
+                </div>
+                {{/detailsBool}}
+                {{#detailsBool}}
+                <div><i class="fa fa-phone fa-fw"></i><span class= "phone">{{{phone}}}</span></div>
+                <div class="email"><i class="fa fa-envelope fa-fw"></i><a href="mailto:{{email}}" target="_blank">{{email}}</a></div>
+                {{/detailsBool}}
+              </blockquote><br>
+            </div>
             {{/references}}
           </div>
           {{/referencesBool}}

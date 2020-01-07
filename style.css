@@ -335,3 +335,15 @@ blockquote {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
+
+#reference-group {
+  display: inline-block;
+}
+
+.reference .company {
+  font-weight: bold;
+}
+
+.reference .title {
+  font-style: italic;
+}

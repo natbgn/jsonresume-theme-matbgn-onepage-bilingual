@@ -231,6 +231,18 @@ function render(resumeObject) {
     if (resumeObject.references && resumeObject.references.length) {
         if (resumeObject.references[0].name) {
             resumeObject.referencesBool = true;
+			_.each(resumeObject.references, function(w){
+				var details = w.reference.split(':')
+                if (details.length == 4) {
+					w.detailsBool = true;
+					w.company = details[0];
+					w.title = details[1];
+					w.email = details[2];
+					w.phone = details[3];
+                } else {
+                    w.detailsBool = false;
+                }
+            });
         }
     }
 
