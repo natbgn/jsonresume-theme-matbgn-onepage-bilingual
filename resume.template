@@ -287,13 +287,13 @@
                 <div class= "name">{{{name}}}</div>
                 {{#detailsBool}}
                 <div>
-                  <span class= "company">{{{company}}} - </span>
+                  <span class= "company">{{{company}}} </span>
                   <span class= "title">{{{title}}}</span>
                 </div>
                 {{/detailsBool}}
                 {{#detailsBool}}
-                <div><i class="fa fa-phone fa-fw"></i><span class= "phone">{{{phone}}}</span></div>
-                <div class="email"><i class="fa fa-envelope fa-fw"></i><a href="mailto:{{email}}" target="_blank">{{email}}</a></div>
+                <div><i class="fa fa-phone fa-fw"></i><span class= "phone"> {{{phone}}}</span></div>
+                <div class="email"><i class="fa fa-envelope fa-fw"></i><span> </span><a href="mailto:{{email}}" target="_blank">{{email}}</a></div>
                 {{/detailsBool}}
               </blockquote><br>
             </div>
