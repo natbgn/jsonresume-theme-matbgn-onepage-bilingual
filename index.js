@@ -155,7 +155,7 @@ function render(resumeObject) {
         if (resumeObject.education[0].institution) {
             resumeObject.educationBool = true;
             _.each(resumeObject.education, function(e){
-                if( !e.area || !e.studyType ){
+                if(!e.area || !e.studyType){
                   e.educationDetail = (e.area == null ? '' : e.area) + (e.studyType == null ? '' : e.studyType);
                 } else {
                   e.educationDetail = e.area + ", "+ e.studyType;
@@ -167,11 +167,16 @@ function render(resumeObject) {
                     e.endDateMonth = "";
                 }
                 if (e.endDate) {
-                    e.endDateYear = e.endDate.substr(0,4);
-                    e.endDateMonth = getMonth(e.endDate || "")
+                    if (e.endDate.substr(0,4) === e.startDateYear) {
+                        e.endDateYear = ''
+                        e.endDateMonth = '';
+                    } else {
+                        e.endDateYear = e.endDate.substr(0,4);
+                        e.endDateMonth = getMonth(e.endDate || "")
 
-                    if (e.endDateYear > curyear) {
-                        e.endDateYear += " (expected)";
+                        if (e.endDateYear > curyear) {
+                            e.endDateYear += " (expected)";
+                        }
                     }
                 } else {
                     e.endDateYear = 'Present'
@@ -186,6 +191,8 @@ function render(resumeObject) {
                 }
             });
         }
+        resumeObject.education = resumeObject.education.filter(e => !RegExp(/Certification.*/).test(e.studyType));
+        resumeObject.certifications = resumeObject.education.filter(e => RegExp(/Certification.*/).test(e.studyType));
     }
 
     if (resumeObject.awards && resumeObject.awards.length) {
