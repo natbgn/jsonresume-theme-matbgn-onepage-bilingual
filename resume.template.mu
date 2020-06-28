@@ -232,7 +232,7 @@
                     {{name}}
                     {{#level}}<span class="skill-level">{{level}}</span>{{/level}}
                   </div>
-                  <div class="col-sm-offset-1 col-sm-12 clearfix">
+                  <div class="col-sm-12 clearfix">
                     {{#keywords}}
                       <span class="skill badge">{{{.}}}</span>
                     {{/keywords}}
