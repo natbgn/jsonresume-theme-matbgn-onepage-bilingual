@@ -2,7 +2,12 @@
 
 var fs = require('fs');
 
-var file = process.cwd() + '/resume.json';
+if (process.argv.length === 2) {
+    var file = `${process.cwd()}/resume.json`;
+} else {
+    var file = process.argv[2];
+}
+
 fs.readFile(file, function(err, resumeJson) {
     var resumeJson;
     if (err) {

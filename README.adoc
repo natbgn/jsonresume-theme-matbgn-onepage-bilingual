@@ -1,23 +1,35 @@
-#jsonresume-theme-kendall
+= JSON Resume based on the kendall-gren theme
+Matthieu Borgognon
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 
 A theme for JSONResume, that relies on Bootstrap and FontAwesome, added with some personal flair.
 
+## Rendering overview
+
+image::https://github.com/matbgn/jsonresume-theme-kendall-gren/raw/master/images/resume_demo.png[Resume Rendering Overview]
+
 ## Usage
 
-To first get started with this JSONResume theme, you'll need to have the JSONResume CLI installed. If you haven't already install it with `npm install -g resume-cli`. If this doesn't work, try `sudo npm install -g resume-cli`.
+To first get started with this JSONResume theme, you'll need to have the JSONResume CLI installed. If you haven't already install it with `npm install -g resume-cli`.
 
-After this, you can get your resume.json ready by typing `resume init`. After hitting enter, your resume will be initialized and you can edit it and fill in the neccessary fields. Check out [the official resume-schema repository](https://github.com/jsonresume/resume-schema) for more information on filling these fields.
+After this, you can get your resume.json ready by typing `resume init`. After hitting enter, your resume will be initialized and you can edit it and fill in the neccessary fields. Check out https://github.com/jsonresume/resume-schema[the official resume-schema repository] for more information on filling these fields.
 
 When you are finished with your resume, you may test it by yet again opening the command line and typing `resume serve --theme kendall` to see how it looks with this theme. You can replace the word `kendall` with other theme names too.
 
 ### Install the command line
 
-We're going to use the official [resume-cli](https://github.com/jsonresume/resume-cli) to run our development server.
+We're going to use the official https://github.com/jsonresume/resume-cli[resume-cli] to run our development server.
 
 Go ahead and install it:
 
 ```
-sudo npm install -g resume-cli
+npm install -g resume-cli
 ```
 
 ### Install npm packages
@@ -25,7 +37,7 @@ sudo npm install -g resume-cli
 We need to install the dependencies. `cd` into the theme folder we just downloaded and run:
 
 ```bash
-sudo npm install
+npm install
 ```
 
 This will read the local `package.json` and install the packages listed under `dependencies`.
@@ -35,17 +47,24 @@ This will read the local `package.json` and install the packages listed under `d
 While inside the theme folder, simply run:
 
 ```
-resume serve --theme .
+node export.js ~/path/to/your/resume.json
+```
+[NOTE]
+====
+You could also place your resume.json in the root folder of this project and run:
+
+```
+node export.js
+```
+====
+
+You should now be able to render your html with a local server, for instance for VSCode:
+
+```
+code --install-extension ritwickdey.LiveServer
 ```
 
-You should now see this message:
-
-```
-Preview: http://localhost:4000
-Press ctrl-c to stop
-```
-
-Congratulations, you've made it!
+TIP: **Right click on the newly generated `index.html`** Congratulations, you've made it!
 
 __The theme development can now begin.__
 
