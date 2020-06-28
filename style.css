@@ -261,6 +261,10 @@ blockquote {
   padding-top: 10px;
 }
 
+.box.clearfix.contact-suite {
+  padding-top: 50px;
+}
+
 .contact-item {
   width: 100%;
   float: left;
