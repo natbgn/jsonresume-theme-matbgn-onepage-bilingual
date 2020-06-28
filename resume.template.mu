@@ -19,9 +19,9 @@
 
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div id="photo-header" class="text-center">
+      <div class="row" id="cv-header">
+        <div class="col-xs-12 col-sm-6">
+          <div id="photo-header">
             <!-- PHOTO (AVATAR) -->
             {{#photo}}
               <div id="photo">
@@ -31,6 +31,58 @@
             <div id="text-header" {{^photo}}style="margin-top: 90px;" {{/photo}}>
               <h1>{{basics.name}}<br>{{#basics.label}}<span>{{basics.label}}</span>{{/basics.label}}</h1>
             </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <!-- CONTACT -->
+          <div class="box clearfix">
+            <h2><i class="fa fa-bullseye ico"></i> Contact</h2>
+            {{#basics.location}}
+              <div class="contact-item">
+                <div class="icon pull-left text-center"><span class="fa fa-map-marker fa-fw"></span></div>
+                {{#basics.location.address}}
+                  <div class="title pull-right">{{basics.location.address}}</div>
+                {{/basics.location.address}}
+                <div class="title {{^basics.location.address}}only {{/basics.location.address}} pull-right">
+                  {{#basics.location.countryCode}}
+                    {{basics.location.countryCode}}{{/basics.location.countryCode}}-{{#basics.location.postalCode}}{{basics.location.postalCode}}{{/basics.location.postalCode}}
+                  {{basics.location.city}}{{#basics.location.region}},
+                    {{basics.location.region}}{{/basics.location.region}}</div>
+              </div>
+            {{/basics.location}}
+            {{#basics.phone}}
+              <div class="contact-item">
+                <div class="icon pull-left text-center"><span class="fa fa-phone fa-fw"></span></div>
+                <div class="title only pull-right">{{basics.phone}}</div>
+              </div>
+            {{/basics.phone}}
+            {{#basics.email}}
+              <div class="contact-item">
+                <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
+                <div class="title only pull-right"><a href="mailto:{{basics.email}}"
+                    target="_blank">{{basics.email}}</a></div>
+              </div>
+            {{/basics.email}}
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <!-- CONTACT SUITE-->
+          <div class="box clearfix contact-suite">
+            {{#basics.website}}
+              <div class="contact-item">
+                <div class="icon pull-left text-center"><span class="fa fa-globe fa-fw"></span></div>
+                <div class="title only pull-right"><a href="{{basics.website}}" target="_blank">{{basics.website}}</a>
+                </div>
+              </div>
+            {{/basics.website}}
+            {{#basics.profiles}}
+              <div class="contact-item">
+                <div class="icon pull-left text-center"><span class="{{iconClass}} fa-fw"></span></div>
+                <div class="title pull-right">{{network}}</div>
+                <div class="description pull-right"><a href="{{url}}"
+                    target="_blank">{{#username}}{{username}}{{/username}}{{^username}}{{url}}{{/username}}</a></div>
+              </div>
+            {{/basics.profiles}}
           </div>
         </div>
       </div>
@@ -135,91 +187,17 @@
               {{/volunteer}}
             </div>
           {{/volunteerBool}}
-          {{#educationBool}}
-            <!-- EDUCATION -->
+          {{#languagesBool}}
+            <!-- LANGUAGES -->
             <div class="box">
-              <h2><i class="fa fa-university ico"></i> Education</h2>
-              <ul id="education" class="clearfix">
-                {{#education}}
-                  <li>
-                    <div class="year pull-left">{{startDateYear}} {{endDateYear}}</div>
-                    <div class="description pull-right">
-                      <h3>{{institution}}</h3>
-                      {{#studyType}}
-                        <p><i class="fa fa-graduation-cap ico"></i> {{studyType}}</p>
-                      {{/studyType}}
-                      <p>{{area}}</p>
-                      {{#gpa}}
-                        <p>
-                          GPA: {{gpa}}
-                        </p>
-                      {{/gpa}}
-                      {{#educationCourses}}
-                        <div>Courses</div>
-                        <ul class="list-group">
-                          {{#courses}}
-                            <li class="list-group-item">{{{.}}}</li>
-                          {{/courses}}
-                        </ul>
-                      {{/educationCourses}}
-                    </div>
-                  </li>
-                {{/education}}
+              <h2 id="languages"><i class="fa fa-language ico"></i> Languages</h2>
+              <ul class="list-group">
+                {{#languages}}
+                  <li class=" list-group-item">{{language}}<span class="skill badge pull-right">{{fluency}}</span></li>
+                {{/languages}}
               </ul>
             </div>
-          {{/educationBool}}
-        </div>
-        <div class="col-xs-12 col-sm-3">
-          <!-- CONTACT -->
-          <div class="box clearfix">
-            <h2><i class="fa fa-bullseye ico"></i> Contact</h2>
-            {{#basics.location}}
-              <div class="contact-item">
-                <div class="icon pull-left text-center"><span class="fa fa-map-marker fa-fw"></span></div>
-                {{#basics.location.address}}
-                  <div class="title pull-right">{{basics.location.address}}</div>
-                {{/basics.location.address}}
-                <div class="title {{^basics.location.address}}only {{/basics.location.address}} pull-right">
-                  {{#basics.location.countryCode}}
-                    {{basics.location.countryCode}}{{/basics.location.countryCode}}-{{#basics.location.postalCode}}{{basics.location.postalCode}}{{/basics.location.postalCode}}
-                  {{basics.location.city}}{{#basics.location.region}},
-                    {{basics.location.region}}{{/basics.location.region}}</div>
-              </div>
-            {{/basics.location}}
-            {{#basics.phone}}
-              <div class="contact-item">
-                <div class="icon pull-left text-center"><span class="fa fa-phone fa-fw"></span></div>
-                <div class="title only pull-right">{{basics.phone}}</div>
-              </div>
-            {{/basics.phone}}
-            {{#basics.email}}
-              <div class="contact-item">
-                <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
-                <div class="title only pull-right"><a href="mailto:{{basics.email}}"
-                    target="_blank">{{basics.email}}</a></div>
-              </div>
-            {{/basics.email}}
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-3">
-          <!-- CONTACT SUITE-->
-          <div class="box clearfix contact-suite">
-            {{#basics.website}}
-              <div class="contact-item">
-                <div class="icon pull-left text-center"><span class="fa fa-globe fa-fw"></span></div>
-                <div class="title only pull-right"><a href="{{basics.website}}" target="_blank">{{basics.website}}</a>
-                </div>
-              </div>
-            {{/basics.website}}
-            {{#basics.profiles}}
-              <div class="contact-item">
-                <div class="icon pull-left text-center"><span class="{{iconClass}} fa-fw"></span></div>
-                <div class="title pull-right">{{network}}</div>
-                <div class="description pull-right"><a href="{{url}}"
-                    target="_blank">{{#username}}{{username}}{{/username}}{{^username}}{{url}}{{/username}}</a></div>
-              </div>
-            {{/basics.profiles}}
-          </div>
+          {{/languagesBool}}
         </div>
         <div class="col-xs-12 col-sm-6">
           {{#skillsBool}}
@@ -241,7 +219,7 @@
               {{/skills}}
             </div>
           {{/skillsBool}}
-          {{#educationBool}}
+          {{#certificationsBool}}
             <!-- CERTIFICATIONS -->
             <div class="box">
               <h2><i class="fa fa-certificate ico"></i> Certifications</h2>
@@ -273,6 +251,39 @@
                 {{/certifications}}
               </ul>
             </div>
+          {{/certificationsBool}}
+          {{#educationBool}}
+            <!-- EDUCATION -->
+            <div class="box">
+              <h2><i class="fa fa-university ico"></i> Education</h2>
+              <ul id="education" class="clearfix">
+                {{#education}}
+                  <li>
+                    <div class="year center">{{startDateYear}} {{endDateYear}}</div>
+                    <div class="description pull-right">
+                      <h3>{{institution}}</h3>
+                      {{#studyType}}
+                        <p><i class="fa fa-graduation-cap ico"></i> {{studyType}}</p>
+                      {{/studyType}}
+                      <p>{{area}}</p>
+                      {{#gpa}}
+                        <p>
+                          GPA: {{gpa}}
+                        </p>
+                      {{/gpa}}
+                      {{#educationCourses}}
+                        <div>Courses</div>
+                        <ul class="list-group">
+                          {{#courses}}
+                            <li class="list-group-item">{{{.}}}</li>
+                          {{/courses}}
+                        </ul>
+                      {{/educationCourses}}
+                    </div>
+                  </li>
+                {{/education}}
+              </ul>
+            </div>
           {{/educationBool}}
           {{#publicationsBool}}
             <!-- PUBLICATIONS -->
@@ -301,17 +312,6 @@
               {{/publications}}
             </div>
           {{/publicationsBool}}
-          {{#languagesBool}}
-            <!-- LANGUAGES -->
-            <div class="box">
-              <h2><i class="fa fa-language ico"></i> Languages</h2>
-              <ul class="list-group">
-                {{#languages}}
-                  <li class=" list-group-item">{{language}}<span class="skill badge pull-right">{{fluency}}</span></li>
-                {{/languages}}
-              </ul>
-            </div>
-          {{/languagesBool}}
           {{#interestsBool}}
             <!-- HOBBIES -->
             <div class="box">
@@ -357,4 +357,5 @@
         </div>
       </div>
   </body>
+
 </html>

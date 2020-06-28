@@ -192,6 +192,9 @@ function render(resumeObject) {
             });
         }
         resumeObject.certifications = resumeObject.education.filter(e => RegExp(/Certification.*/).test(e.studyType));
+        if (resumeObject.certifications[0].institution) {
+            resumeObject.certificationsBool = true;
+        }
         resumeObject.education = resumeObject.education.filter(e => !RegExp(/Certification.*/).test(e.studyType));
     }
 
