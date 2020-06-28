@@ -160,6 +160,10 @@ blockquote {
   display: inline-block;
 }
 
+#education .year.center {
+  text-align: center;
+}
+
 #awards .description,
 #education .description {
   width: 83%;

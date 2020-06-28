@@ -242,13 +242,13 @@
             </div>
           {{/skillsBool}}
           {{#educationBool}}
-            <!-- EDUCATION -->
+            <!-- CERTIFICATIONS -->
             <div class="box">
-              <h2><i class="fa fa-university ico"></i> Education</h2>
+              <h2><i class="fa fa-certificate ico"></i> Certifications</h2>
               <ul id="education" class="clearfix">
-                {{#education}}
+                {{#certifications}}
                   <li>
-                    <div class="year pull-left">{{startDateYear}} {{endDateYear}}</div>
+                    <div class="year center">{{startDateYear}}</div>
                     <div class="description pull-right">
                       <h3>{{institution}}</h3>
                       {{#studyType}}
@@ -270,7 +270,7 @@
                       {{/educationCourses}}
                     </div>
                   </li>
-                {{/education}}
+                {{/certifications}}
               </ul>
             </div>
           {{/educationBool}}
