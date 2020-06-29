@@ -9,29 +9,29 @@ var curyear = d.getFullYear();
 function getMonth(startDateStr) {
     switch (startDateStr.substr(5,2)) {
     case '01':
-        return "January ";
+        return resumeObject.meta.language == 'fr' ? 'Janvier' : "January ";
     case '02':
-        return "February ";
+        return resumeObject.meta.language == 'fr' ? 'Février' : "February ";
     case '03':
-        return "March ";
+        return resumeObject.meta.language == 'fr' ? 'Mars' : "March ";
     case '04':
-        return "April ";
+        return resumeObject.meta.language == 'fr' ? 'Avril' : "April ";
     case '05':
-        return "May ";
+        return resumeObject.meta.language == 'fr' ? 'Mai' : "May ";
     case '06':
-        return "June ";
+        return resumeObject.meta.language == 'fr' ? 'Juin' : "June ";
     case '07':
-        return "July ";
+        return resumeObject.meta.language == 'fr' ? 'Juillet' : "July ";
     case '08':
-        return "August ";
+        return resumeObject.meta.language == 'fr' ? 'Août' : "August ";
     case '09':
-        return "September ";
+        return resumeObject.meta.language == 'fr' ? 'Septembre' : "September ";
     case '10':
-        return "October ";
+        return resumeObject.meta.language == 'fr' ? 'Octobre' : "October ";
     case '11':
-        return "November ";
+        return resumeObject.meta.language == 'fr' ? 'Novembre' : "November ";
     case '12':
-        return "December ";
+        return resumeObject.meta.language == 'fr' ? 'Décembre' : "December ";
     }
 }
 
@@ -128,7 +128,7 @@ function render(resumeObject) {
                 w.endDateYear = (w.endDate || "").substr(0,4);
                 w.endDateMonth = getMonth(w.endDate || "");
             } else {
-                w.endDateYear = 'Present'
+                w.endDateYear = resumeObject.meta.language == 'fr' ? 'Présent' : 'Present'
             }
             if (w.highlights) {
                 if (w.highlights[0]) {
@@ -152,7 +152,7 @@ function render(resumeObject) {
                 w.endDateYear = (w.endDate || "").substr(0,4);
                 w.endDateMonth = getMonth(w.endDate || "");
             } else {
-                w.endDateYear = 'Present'
+                w.endDateYear = resumeObject.meta.language == 'fr' ? 'Présent' : 'Present'
             }
             if (w.highlights) {
                 if (w.highlights[0]) {
@@ -188,11 +188,11 @@ function render(resumeObject) {
                         e.endDateMonth = getMonth(e.endDate || "")
 
                         if (e.endDateYear > curyear) {
-                            e.endDateYear += " (expected)";
+                            e.endDateYear = resumeObject.meta.language == 'fr' ? e.endDateYear + " (prévu)" : e.endDateYear + " (expected)";
                         }
                     }
                 } else {
-                    e.endDateYear = 'Present'
+                    e.endDateYear = resumeObject.meta.language == 'fr' ? 'Présent' : 'Present'
                     e.endDateMonth = '';
                 }
                 if (e.courses) {
