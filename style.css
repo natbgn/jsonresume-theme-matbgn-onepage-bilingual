@@ -181,6 +181,7 @@ blockquote {
   display: inline-block;
 }
 
+#awards .year.center,
 #education .year.center {
   text-align: center;
 }
@@ -355,6 +356,7 @@ blockquote {
   color: #fff;
   padding: 1px 8px;
   font-size: .75em;
+  font-weight: 700;
   position: absolute;
   margin: 1px 10px;
 }

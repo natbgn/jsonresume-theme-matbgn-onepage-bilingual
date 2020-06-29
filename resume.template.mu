@@ -141,7 +141,7 @@
                         {{#boolHighlights}}
                           <div class="highlights">
                             {{#languageFR}}
-                              Faits marquants
+                              Points marquants
                             {{/languageFR}}
                             {{#languageEN}}
                               Highlights
@@ -160,31 +160,6 @@
               {{/work}}
             </div>
           {{/workBool}}
-          {{#awardsBool}}
-            <!-- AWARDS -->
-            <div class="box">
-              <h2><i class="fa fa-certificate ico"></i>
-                {{#languageFR}}
-                  Distinctions
-                {{/languageFR}}
-                {{#languageEN}}
-                  Awards
-                {{/languageEN}}
-              </h2>
-              <ul id="awards" class="clearfix">
-                {{#awards}}
-                  <li>
-                    <div class="year pull-left">{{month}} {{year}}</div>
-                    <div class="description pull-right">
-                      <h3>{{awarder}}</h3>
-                      <p><i class="fa fa-trophy ico"></i> {{title}}</p>
-                      <p>{{{summary}}}</p>
-                    </div>
-                  </li>
-                {{/awards}}
-              </ul>
-            </div>
-          {{/awardsBool}}
           {{#volunteerBool}}
             <!-- VOLUNTEER -->
             <div class="box">
@@ -217,7 +192,7 @@
                         {{#boolHighlights}}
                           <div class="highlights">
                             {{#languageFR}}
-                              Faits marquants
+                              Points marquants
                             {{/languageFR}}
                             {{#languageEN}}
                               Highlights
@@ -445,6 +420,31 @@
               {{/interests}}
             </div>
           {{/interestsBool}}
+          {{#awardsBool}}
+            <!-- AWARDS -->
+            <div class="box">
+              <h2><i class="fa fa-certificate ico"></i>
+                {{#languageFR}}
+                  Distinctions
+                {{/languageFR}}
+                {{#languageEN}}
+                  Awards
+                {{/languageEN}}
+              </h2>
+              <ul id="awards" class="clearfix">
+                {{#awards}}
+                  <li>
+                    <div class="year center">{{month}} {{year}}</div>
+                    <div class="description pull-right">
+                      <h3>{{awarder}}</h3>
+                      <p><i class="fa fa-trophy ico"></i> {{title}}</p>
+                      <p>{{{summary}}}</p>
+                    </div>
+                  </li>
+                {{/awards}}
+              </ul>
+            </div>
+          {{/awardsBool}}
           {{#referencesBool}}
             <!-- REFERENCES -->
             <div class="box">

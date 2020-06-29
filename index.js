@@ -6,32 +6,32 @@ var Mustache = require('mustache');
 var d = new Date();
 var curyear = d.getFullYear();
 
-function getMonth(startDateStr) {
+function getMonth(startDateStr, language = 'en') {
     switch (startDateStr.substr(5,2)) {
     case '01':
-        return resumeObject.meta.language == 'fr' ? 'Janvier' : "January ";
+        return language == 'fr' ? 'Janvier ' : "January ";
     case '02':
-        return resumeObject.meta.language == 'fr' ? 'Février' : "February ";
+        return language == 'fr' ? 'Février ' : "February ";
     case '03':
-        return resumeObject.meta.language == 'fr' ? 'Mars' : "March ";
+        return language == 'fr' ? 'Mars ' : "March ";
     case '04':
-        return resumeObject.meta.language == 'fr' ? 'Avril' : "April ";
+        return language == 'fr' ? 'Avril ' : "April ";
     case '05':
-        return resumeObject.meta.language == 'fr' ? 'Mai' : "May ";
+        return language == 'fr' ? 'Mai ' : "May ";
     case '06':
-        return resumeObject.meta.language == 'fr' ? 'Juin' : "June ";
+        return language == 'fr' ? 'Juin ' : "June ";
     case '07':
-        return resumeObject.meta.language == 'fr' ? 'Juillet' : "July ";
+        return language == 'fr' ? 'Juillet ' : "July ";
     case '08':
-        return resumeObject.meta.language == 'fr' ? 'Août' : "August ";
+        return language == 'fr' ? 'Août ' : "August ";
     case '09':
-        return resumeObject.meta.language == 'fr' ? 'Septembre' : "September ";
+        return language == 'fr' ? 'Septembre ' : "September ";
     case '10':
-        return resumeObject.meta.language == 'fr' ? 'Octobre' : "October ";
+        return language == 'fr' ? 'Octobre ' : "October ";
     case '11':
-        return resumeObject.meta.language == 'fr' ? 'Novembre' : "November ";
+        return language == 'fr' ? 'Novembre ' : "November ";
     case '12':
-        return resumeObject.meta.language == 'fr' ? 'Décembre' : "December ";
+        return language == 'fr' ? 'Décembre ' : "December ";
     }
 }
 
@@ -121,14 +121,14 @@ function render(resumeObject) {
         _.each(resumeObject.work, function(w){
             if (w.startDate) {
                 w.startDateYear = (w.startDate || "").substr(0,4);
-                w.startDateMonth = getMonth(w.startDate || "");
+                w.startDateMonth = getMonth(w.startDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en');
 
             }
             if(w.endDate) {
                 w.endDateYear = (w.endDate || "").substr(0,4);
-                w.endDateMonth = getMonth(w.endDate || "");
+                w.endDateMonth = getMonth(w.endDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en');
             } else {
-                w.endDateYear = resumeObject.meta.language == 'fr' ? 'Présent' : 'Present'
+                w.endDateYear = (resumeObject.meta && resumeObject.meta.language == 'fr') ? 'Présent' : 'Present'
             }
             if (w.highlights) {
                 if (w.highlights[0]) {
@@ -145,14 +145,14 @@ function render(resumeObject) {
         _.each(resumeObject.volunteer, function(w){
             if (w.startDate) {
                 w.startDateYear = (w.startDate || "").substr(0,4);
-                w.startDateMonth = getMonth(w.startDate || "");
+                w.startDateMonth = getMonth(w.startDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en');
 
             }
             if(w.endDate) {
                 w.endDateYear = (w.endDate || "").substr(0,4);
-                w.endDateMonth = getMonth(w.endDate || "");
+                w.endDateMonth = getMonth(w.endDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en');
             } else {
-                w.endDateYear = resumeObject.meta.language == 'fr' ? 'Présent' : 'Present'
+                w.endDateYear = (resumeObject.meta && resumeObject.meta.language == 'fr') ? 'Présent' : 'Present'
             }
             if (w.highlights) {
                 if (w.highlights[0]) {
@@ -175,7 +175,7 @@ function render(resumeObject) {
                 }
                 if (e.startDate) {
                     e.startDateYear = e.startDate.substr(0,4);
-                    e.startDateMonth = getMonth(e.startDate || "");
+                    e.startDateMonth = getMonth(e.startDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en');
                 } else {
                     e.endDateMonth = "";
                 }
@@ -185,14 +185,14 @@ function render(resumeObject) {
                         e.endDateMonth = '';
                     } else {
                         e.endDateYear = e.endDate.substr(0,4);
-                        e.endDateMonth = getMonth(e.endDate || "")
+                        e.endDateMonth = getMonth(e.endDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en')
 
                         if (e.endDateYear > curyear) {
-                            e.endDateYear = resumeObject.meta.language == 'fr' ? e.endDateYear + " (prévu)" : e.endDateYear + " (expected)";
+                            e.endDateYear = (resumeObject.meta && resumeObject.meta.language == 'fr') ? e.endDateYear + " (prévu)" : e.endDateYear + " (expected)";
                         }
                     }
                 } else {
-                    e.endDateYear = resumeObject.meta.language == 'fr' ? 'Présent' : 'Present'
+                    e.endDateYear = (resumeObject.meta && resumeObject.meta.language == 'fr') ? 'Présent' : 'Present'
                     e.endDateMonth = '';
                 }
                 if (e.courses) {
@@ -205,7 +205,7 @@ function render(resumeObject) {
             });
         }
         resumeObject.certifications = resumeObject.education.filter(e => RegExp(/Certification.*/).test(e.studyType));
-        if (resumeObject.certifications[0].institution) {
+        if (resumeObject.certifications[0]) {
             resumeObject.certificationsBool = true;
         }
         resumeObject.education = resumeObject.education.filter(e => !RegExp(/Certification.*/).test(e.studyType));
@@ -217,7 +217,7 @@ function render(resumeObject) {
             _.each(resumeObject.awards, function(a){
                 a.year = (a.date || "").substr(0,4);
                 a.day = (a.date || "").substr(8,2);
-                a.month = getMonth(a.date || "");
+                a.month = getMonth(a.date || "", (resumeObject.meta && resumeObject.meta.language) || 'en');
             });
         }
     }
@@ -228,7 +228,7 @@ function render(resumeObject) {
             _.each(resumeObject.publications, function(a){
                 a.year = (a.releaseDate || "").substr(0,4);
                 a.day = (a.releaseDate || "").substr(8,2);
-                a.month = getMonth(a.releaseDate || "");
+                a.month = getMonth(a.releaseDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en');
             });
         }
     }
