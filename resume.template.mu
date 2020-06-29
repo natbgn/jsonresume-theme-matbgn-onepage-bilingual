@@ -91,14 +91,28 @@
           {{#basics.summary}}
             <!-- ABOUT ME -->
             <div class="box">
-              <h2><i class="fa fa-user ico"></i> About</h2>
+              <h2><i class="fa fa-user ico"></i> 
+                {{#languageFR}}
+                  A propos
+                {{/languageFR}}
+                {{#languageEN}}
+                  About
+                {{/languageEN}}
+              </h2>
               <p>{{{basics.summary}}}</p>
             </div>
           {{/basics.summary}}
           {{#workBool}}
             <!-- WORK EXPERIENCE -->
             <div class="box">
-              <h2><i class="fa fa-suitcase ico"></i> Work Experience</h2>
+              <h2><i class="fa fa-suitcase ico"></i> 
+                {{#languageFR}}
+                  Expérience profesionnelle
+                {{/languageFR}}
+                {{#languageEN}}
+                  Work Experience
+                {{/languageEN}}
+              </h2>
               {{#work}}
                 <div class="job clearfix">
                   <div class="row">
@@ -153,7 +167,14 @@
           {{#volunteerBool}}
             <!-- VOLUNTEER -->
             <div class="box">
-              <h2><i class="fa fa-group ico"></i> Volunteer</h2>
+              <h2><i class="fa fa-group ico"></i>
+                {{#languageFR}}
+                  Volontariat
+                {{/languageFR}}
+                {{#languageEN}}
+                  Volunteer
+                {{/languageEN}} 
+              </h2>
               {{#volunteer}}
                 <div class="job clearfix">
                   <div class="row">
@@ -190,7 +211,14 @@
           {{#languagesBool}}
             <!-- LANGUAGES -->
             <div class="box">
-              <h2 id="languages"><i class="fa fa-language ico"></i> Languages</h2>
+              <h2 id="languages"><i class="fa fa-language ico"></i> 
+                {{#languageFR}}
+                  Langues
+                {{/languageFR}}
+                {{#languageEN}}
+                  Languages
+                {{/languageEN}} 
+              </h2>
               <ul class="list-group">
                 {{#languages}}
                   <li class=" list-group-item">{{language}}<span class="skill badge pull-right">{{fluency}}</span></li>
@@ -203,7 +231,14 @@
           {{#skillsBool}}
             <!-- SKILLS -->
             <div class="box">
-              <h2><i class="fa fa-tasks ico"></i> Skills</h2>
+              <h2><i class="fa fa-tasks ico"></i> 
+                {{#languageFR}}
+                  Compétences
+                {{/languageFR}}
+                {{#languageEN}}
+                  Skills
+                {{/languageEN}} 
+              </h2>
               {{#skills}}
                 <div class="skills clearfix">
                   <div class="item-skills">
@@ -222,7 +257,14 @@
           {{#certificationsBool}}
             <!-- CERTIFICATIONS -->
             <div class="box">
-              <h2><i class="fa fa-certificate ico"></i> Certifications</h2>
+              <h2><i class="fa fa-certificate ico"></i>
+                {{#languageFR}}
+                  Certifications
+                {{/languageFR}}
+                {{#languageEN}}
+                  Certifications
+                {{/languageEN}} 
+              </h2>
               <ul id="education" class="clearfix">
                 {{#certifications}}
                   <li>
@@ -255,7 +297,14 @@
           {{#educationBool}}
             <!-- EDUCATION -->
             <div class="box">
-              <h2><i class="fa fa-university ico"></i> Education</h2>
+              <h2><i class="fa fa-university ico"></i>
+                {{#languageFR}}
+                  Formation
+                {{/languageFR}}
+                {{#languageEN}}
+                  Education
+                {{/languageEN}} 
+              </h2>
               <ul id="education" class="clearfix">
                 {{#education}}
                   <li>

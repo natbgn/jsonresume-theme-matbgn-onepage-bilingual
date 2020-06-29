@@ -103,6 +103,19 @@ function render(resumeObject) {
         }
     });
 
+    if (resumeObject.meta && resumeObject.meta.language) {
+        if (resumeObject.meta.language == 'fr') {
+            resumeObject.languageFR = true;
+            resumeObject.languageEN = false;
+        } else {
+            resumeObject.languageEN = true
+            resumeObject.languageFR = false;
+        }
+    } else {
+        resumeObject.languageEN = true
+        resumeObject.languageFR = false;
+    }
+
     if (resumeObject.work && resumeObject.work.length) {
         resumeObject.workBool = true;
         _.each(resumeObject.work, function(w){
