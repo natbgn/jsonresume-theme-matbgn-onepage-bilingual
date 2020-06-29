@@ -36,7 +36,14 @@
         <div class="col-xs-12 col-sm-3">
           <!-- CONTACT -->
           <div class="box clearfix">
-            <h2><i class="fa fa-bullseye ico"></i> Contact</h2>
+            <h2><i class="fa fa-bullseye ico"></i>
+              {{#languageFR}}
+                Contact
+              {{/languageFR}}
+              {{#languageEN}}
+                Contact
+              {{/languageEN}}
+            </h2>
             {{#basics.location}}
               <div class="contact-item">
                 <div class="icon pull-left text-center"><span class="fa fa-map-marker fa-fw"></span></div>
@@ -91,7 +98,7 @@
           {{#basics.summary}}
             <!-- ABOUT ME -->
             <div class="box">
-              <h2><i class="fa fa-user ico"></i> 
+              <h2><i class="fa fa-user ico"></i>
                 {{#languageFR}}
                   A propos
                 {{/languageFR}}
@@ -105,7 +112,7 @@
           {{#workBool}}
             <!-- WORK EXPERIENCE -->
             <div class="box">
-              <h2><i class="fa fa-suitcase ico"></i> 
+              <h2><i class="fa fa-suitcase ico"></i>
                 {{#languageFR}}
                   Expérience profesionnelle
                 {{/languageFR}}
@@ -132,7 +139,14 @@
                       <div class="description">
                         {{{summary}}}
                         {{#boolHighlights}}
-                          <div class="highlights">Highlights</div>
+                          <div class="highlights">
+                            {{#languageFR}}
+                              Faits marquants
+                            {{/languageFR}}
+                            {{#languageEN}}
+                              Highlights
+                            {{/languageEN}}
+                          </div>
                           <ul class="list-group">
                             {{#highlights}}
                               <li class="list-group-item">{{{.}}}</li>
@@ -149,7 +163,14 @@
           {{#awardsBool}}
             <!-- AWARDS -->
             <div class="box">
-              <h2><i class="fa fa-certificate ico"></i> Awards</h2>
+              <h2><i class="fa fa-certificate ico"></i>
+                {{#languageFR}}
+                  Distinctions
+                {{/languageFR}}
+                {{#languageEN}}
+                  Awards
+                {{/languageEN}}
+              </h2>
               <ul id="awards" class="clearfix">
                 {{#awards}}
                   <li>
@@ -173,7 +194,7 @@
                 {{/languageFR}}
                 {{#languageEN}}
                   Volunteer
-                {{/languageEN}} 
+                {{/languageEN}}
               </h2>
               {{#volunteer}}
                 <div class="job clearfix">
@@ -189,12 +210,19 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-xs-11 pull-right">
+                    <div class="job-details col-xs-11">
                       <div class="profession">{{position}}</div>
                       <div class="description">
                         {{{summary}}}
                         {{#boolHighlights}}
-                          <div class="highlights">Highlights</div>
+                          <div class="highlights">
+                            {{#languageFR}}
+                              Faits marquants
+                            {{/languageFR}}
+                            {{#languageEN}}
+                              Highlights
+                            {{/languageEN}}
+                          </div>
                           <ul class="list-group">
                             {{#highlights}}
                               <li class="list-group-item">{{{.}}}</li>
@@ -211,13 +239,13 @@
           {{#languagesBool}}
             <!-- LANGUAGES -->
             <div class="box">
-              <h2 id="languages"><i class="fa fa-language ico"></i> 
+              <h2 id="languages"><i class="fa fa-language ico"></i>
                 {{#languageFR}}
                   Langues
                 {{/languageFR}}
                 {{#languageEN}}
                   Languages
-                {{/languageEN}} 
+                {{/languageEN}}
               </h2>
               <ul class="list-group">
                 {{#languages}}
@@ -231,13 +259,13 @@
           {{#skillsBool}}
             <!-- SKILLS -->
             <div class="box">
-              <h2><i class="fa fa-tasks ico"></i> 
+              <h2><i class="fa fa-tasks ico"></i>
                 {{#languageFR}}
                   Compétences
                 {{/languageFR}}
                 {{#languageEN}}
                   Skills
-                {{/languageEN}} 
+                {{/languageEN}}
               </h2>
               {{#skills}}
                 <div class="skills clearfix">
@@ -263,7 +291,7 @@
                 {{/languageFR}}
                 {{#languageEN}}
                   Certifications
-                {{/languageEN}} 
+                {{/languageEN}}
               </h2>
               <ul id="education" class="clearfix">
                 {{#certifications}}
@@ -277,11 +305,23 @@
                       <p>{{area}}</p>
                       {{#gpa}}
                         <p>
-                          GPA: {{gpa}}
+                          {{#languageFR}}
+                            Note: {{gpa}}
+                          {{/languageFR}}
+                          {{#languageEN}}
+                            GPA: {{gpa}}
+                          {{/languageEN}}
                         </p>
                       {{/gpa}}
                       {{#educationCourses}}
-                        <div>Courses</div>
+                        <div>
+                          {{#languageFR}}
+                            Cours
+                          {{/languageFR}}
+                          {{#languageEN}}
+                            Courses
+                          {{/languageEN}}
+                        </div>
                         <ul class="list-group">
                           {{#courses}}
                             <li class="list-group-item">{{{.}}}</li>
@@ -303,7 +343,7 @@
                 {{/languageFR}}
                 {{#languageEN}}
                   Education
-                {{/languageEN}} 
+                {{/languageEN}}
               </h2>
               <ul id="education" class="clearfix">
                 {{#education}}
@@ -317,11 +357,23 @@
                       <p>{{area}}</p>
                       {{#gpa}}
                         <p>
-                          GPA: {{gpa}}
+                          {{#languageFR}}
+                            Note: {{gpa}}
+                          {{/languageFR}}
+                          {{#languageEN}}
+                            GPA: {{gpa}}
+                          {{/languageEN}}
                         </p>
                       {{/gpa}}
                       {{#educationCourses}}
-                        <div>Courses</div>
+                        <div>
+                          {{#languageFR}}
+                            Cours
+                          {{/languageFR}}
+                          {{#languageEN}}
+                            Courses
+                          {{/languageEN}}
+                        </div>
                         <ul class="list-group">
                           {{#courses}}
                             <li class="list-group-item">{{{.}}}</li>
@@ -337,7 +389,14 @@
           {{#publicationsBool}}
             <!-- PUBLICATIONS -->
             <div class="box">
-              <h2><i class="fa fa-book ico"></i> Publications</h2>
+              <h2><i class="fa fa-book ico"></i>
+                {{#languageFR}}
+                  Publications
+                {{/languageFR}}
+                {{#languageEN}}
+                  Publications
+                {{/languageEN}}
+              </h2>
               {{#publications}}
                 <div class="publication panel panel-default">
                   <div class="panel-heading">
@@ -364,7 +423,14 @@
           {{#interestsBool}}
             <!-- HOBBIES -->
             <div class="box">
-              <h2><i class="fa fa-heart ico"></i> Interests</h2>
+              <h2><i class="fa fa-heart ico"></i>
+                {{#languageFR}}
+                  Intérêts
+                {{/languageFR}}
+                {{#languageEN}}
+                  Interests
+                {{/languageEN}}
+              </h2>
               {{#interests}}
                 <div class="interests clearfix">
                   <div class="item-interests">
@@ -382,7 +448,14 @@
           {{#referencesBool}}
             <!-- REFERENCES -->
             <div class="box">
-              <h2><i class="fa fa-check-square ico"></i> References</h2>
+              <h2><i class="fa fa-check-square ico"></i>
+                {{#languageFR}}
+                  Références
+                {{/languageFR}}
+                {{#languageEN}}
+                  References
+                {{/languageEN}}
+              </h2>
               {{#references}}
                 <div id="reference-group">
                   <blockquote class="reference">
