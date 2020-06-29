@@ -1,11 +1,12 @@
 {
     "spellright.language": [
-        "French"
+        "English (American)"
     ],
     "spellright.documentTypes": [
         "markdown",
         "latex",
         "plaintext",
-        "json"
+        "json",
+        "asciidoc"
     ]
 }

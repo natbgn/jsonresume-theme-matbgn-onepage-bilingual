@@ -68,6 +68,21 @@ TIP: **Right click on the newly generated `index.html`** Congratulations, you've
 
 __The theme development can now begin.__
 
+## Multiple languages support
+
+The categories are actually translated in:
+
+* English (default)
+* French
+
+To switch languages, simply add the following lines at the bottom of your resume.json:
+
+```
+"meta": {
+    "language": "fr"
+}
+```
+
 ## Tips
 
 As of now, the theme supports the following profiles in the basics.profiles array.
