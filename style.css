@@ -11,13 +11,14 @@
   --secondary-color: #9e8778;
   --background-color: #4d555e;
   --notification-color: #DA680F;
+  --font-color: #363636;
 }
 
 body {
   font-family: 'Open Sans', Arial, Tahoma;
   font-weight: 400;
   font-size: 12px;
-  color: #363636;
+  color: var(--font-color,#363636);
   background: var(--background-color,#334960);
 }
 
@@ -105,7 +106,7 @@ blockquote {
 }
 
 #text-header h1 span {
-  color: #334960;
+  color: var(--font-color,#334960);
   opacity: 0.7;
 }
 
@@ -318,7 +319,7 @@ blockquote {
 .contact-item .description {
   width: 80%;
   width: calc(100% - 55px);
-  color: #334960;
+  color: var(--font-color,#334960);
 }
 
 .list-group-item {
@@ -328,7 +329,7 @@ blockquote {
 .item-interests,
 .item-skills {
   height: 30px;
-  color: #334960;
+  color: var(--font-color,#334960);
   padding: 5px 10px;
   margin-bottom: 5px;
   white-space: nowrap;
