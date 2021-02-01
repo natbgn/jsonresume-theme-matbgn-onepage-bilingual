@@ -91,7 +91,7 @@ To switch languages, simply add the following lines at the bottom of your resume
 
 ## Block flexibility
 
-The following blocks can either be printed on right or lefit side:
+The following blocks can either be printed on right or left side:
 
 * languages
 
@@ -99,7 +99,7 @@ To switch sides, simply add the following lines at the bottom of your resume.jso
 
 ```
 "meta": {
-    "languagesSide": "right"
+    "languagesSide": "left"
 }
 ```
 
