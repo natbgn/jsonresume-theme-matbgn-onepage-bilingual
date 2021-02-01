@@ -68,6 +68,12 @@ TIP: **Right click on the newly generated `index.html`** Congratulations, you've
 
 __The theme development can now begin.__
 
+### Print a PDF version
+
+To print the resume in pdf in a 100% fidelity mode *use web browser OPERA*. Respectively it's built-in capture feature.
+
+Before each print you can tweak the rendering by manipulating the rendered HTML code trough opera's code inspector.
+
 ## Multiple languages support
 
 The categories are actually translated in:
@@ -80,6 +86,20 @@ To switch languages, simply add the following lines at the bottom of your resume
 ```
 "meta": {
     "language": "fr"
+}
+```
+
+## Block flexibility
+
+The following blocks can either be printed on right or lefit side:
+
+* languages
+
+To switch sides, simply add the following lines at the bottom of your resume.json:
+
+```
+"meta": {
+    "languagesSide": "right"
 }
 ```
 
