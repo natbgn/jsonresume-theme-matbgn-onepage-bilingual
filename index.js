@@ -201,7 +201,7 @@ function render(resumeObject) {
                         e.endDateMonth = getMonth(e.endDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en')
 
                         if (e.endDateYear > curyear) {
-                            e.endDateYear = (resumeObject.meta && resumeObject.meta.language == 'fr') ? e.endDateYear + " (prévu)" : e.endDateYear + " (expected)";
+                            e.endDateYear = (resumeObject.meta && resumeObject.meta.language == 'fr') ? "(prévu) " + e.endDateYear : "(expected) " + e.endDateYear;
                         }
                     }
                 } else {
