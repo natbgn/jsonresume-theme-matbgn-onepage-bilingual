@@ -212,7 +212,8 @@
             </div>
           {{/volunteerBool}}
           {{#languagesBool}}
-            <!-- LANGUAGES -->
+          {{#languagesSideLeft}}
+            <!-- LANGUAGES CONDITIONNAL LEFT-->
             <div class="box">
               <h2 id="languages"><i class="fa fa-language ico"></i>
                 {{#languageFR}}
@@ -228,6 +229,7 @@
                 {{/languages}}
               </ul>
             </div>
+            {{/languagesSideLeft}}
           {{/languagesBool}}
         </div>
         <div class="col-xs-12 col-sm-6">
@@ -271,7 +273,9 @@
               <ul id="education" class="clearfix">
                 {{#certifications}}
                   <li>
-                    <div class="year center">{{startDateYear}}</div>
+                    <div class="year center">{{startDateYear}}
+                        {{endDateYear}}
+                    </div>
                     <div class="description pull-right">
                       <h3>{{institution}}</h3>
                       {{#studyType}}
@@ -361,6 +365,26 @@
               </ul>
             </div>
           {{/educationBool}}
+          {{#languagesBool}}
+          {{#languagesSideRight}}
+            <!-- LANGUAGES CONDITIONNAL RIGHT-->
+            <div class="box">
+              <h2 id="languages"><i class="fa fa-language ico"></i>
+                {{#languageFR}}
+                  Langues
+                {{/languageFR}}
+                {{#languageEN}}
+                  Languages
+                {{/languageEN}}
+              </h2>
+              <ul class="list-group">
+                {{#languages}}
+                  <li class=" list-group-item">{{language}}<span class="skill badge pull-right">{{fluency}}</span></li>
+                {{/languages}}
+              </ul>
+            </div>
+            {{/languagesSideRight}}
+          {{/languagesBool}}
           {{#publicationsBool}}
             <!-- PUBLICATIONS -->
             <div class="box">

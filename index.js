@@ -116,6 +116,19 @@ function render(resumeObject) {
         resumeObject.languageFR = false;
     }
 
+    if (resumeObject.meta && resumeObject.meta.languagesSide) {
+        if(resumeObject.meta.languagesSide == 'right') {
+            resumeObject.languagesSideRight = true;
+            resumeObject.languagesSideLeft = false;
+        } else {
+            resumeObject.languagesSideRight = false;
+            resumeObject.languagesSideLeft = true;
+        }
+    } else {
+        resumeObject.languagesSideRight = true
+        resumeObject.languagesSideLeft = false;
+    }
+
     if (resumeObject.work && resumeObject.work.length) {
         resumeObject.workBool = true;
         _.each(resumeObject.work, function(w){
