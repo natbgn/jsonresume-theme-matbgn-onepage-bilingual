@@ -274,7 +274,7 @@
                 {{#certifications}}
                   <li>
                     <div class="year center">{{startDateYear}}
-                        {{endDateYear}}
+                        <br>{{endDateYear}}
                     </div>
                     <div class="description pull-right">
                       <h3>{{institution}}</h3>
@@ -327,7 +327,8 @@
               <ul id="education" class="clearfix">
                 {{#education}}
                   <li>
-                    <div class="year center">{{startDateYear}} {{endDateYear}}</div>
+                    <div class="year center">{{startDateYear}} 
+                    <br>{{endDateYear}}</div>
                     <div class="description pull-right">
                       <h3>{{institution}}</h3>
                       {{#studyType}}
