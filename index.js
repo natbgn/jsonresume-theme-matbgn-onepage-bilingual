@@ -116,6 +116,19 @@ function render(resumeObject) {
         resumeObject.languageFR = false;
     }
 
+    if (resumeObject.meta && resumeObject.meta.languagesSide) {
+        if(resumeObject.meta.languagesSide == 'right') {
+            resumeObject.languagesSideRight = true;
+            resumeObject.languagesSideLeft = false;
+        } else {
+            resumeObject.languagesSideRight = false;
+            resumeObject.languagesSideLeft = true;
+        }
+    } else {
+        resumeObject.languagesSideRight = true
+        resumeObject.languagesSideLeft = false;
+    }
+
     if (resumeObject.work && resumeObject.work.length) {
         resumeObject.workBool = true;
         _.each(resumeObject.work, function(w){
@@ -188,7 +201,7 @@ function render(resumeObject) {
                         e.endDateMonth = getMonth(e.endDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en')
 
                         if (e.endDateYear > curyear) {
-                            e.endDateYear = (resumeObject.meta && resumeObject.meta.language == 'fr') ? e.endDateYear + " (prévu)" : e.endDateYear + " (expected)";
+                            e.endDateYear = (resumeObject.meta && resumeObject.meta.language == 'fr') ? "(prévu) " + e.endDateYear : "(expected) " + e.endDateYear;
                         }
                     }
                 } else {

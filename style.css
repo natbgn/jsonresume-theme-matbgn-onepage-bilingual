@@ -7,11 +7,12 @@
 @viewport           { width: device-width; }
 
 :root {
-  --primary-color: #4A2C2A;
-  --secondary-color: #9e8778;
-  --background-color: #4d555e;
-  --notification-color: #DA680F;
-  --font-color: #363636;
+  --primary-color:  #4d555e;    // #4A2C2A;
+  --secondary-color: #799915;     // #9e8778;
+  --background-color:  #4d555e;   // #4d555e;
+  --notification-color: #BA2C45;  // #DA680F;
+  --border-color: #939393;        // #CCC;
+  --font-color: #363636;          // #363636;
 }
 
 body {
@@ -60,6 +61,7 @@ blockquote {
 
 .container{
   margin-top: 80px;
+  margin-bottom: 80px;
   background: #fff;
 }
 
@@ -116,7 +118,7 @@ blockquote {
 
 #cv-header {
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-color, #ccc);
   margin: 0;
   content: '';
   display: block;
@@ -195,8 +197,8 @@ blockquote {
   margin-bottom: 10px;
   position: relative;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-color, #ccc);
+  border-right: 1px solid var(--border-color, #ccc);
 }
 
 #awards .description:after,
@@ -238,8 +240,8 @@ blockquote {
   padding: 10px;
   margin-bottom: 10px;
   background: #eee;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-color, #ccc);
+  border-right: 1px solid var(--border-color, #ccc);
 }
 
 .job .where {
@@ -299,8 +301,8 @@ blockquote {
 
 .contact-item .icon {
   padding: 10px;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-right: 1px solid var(--border-color, #ccc);
+  border-bottom: 1px solid var(--border-color, #ccc);
   color: var(--primary-color,#32475c);
   background: #eee;
 }
@@ -352,7 +354,7 @@ blockquote {
 }
 
 .skill-level {
-  background-color: var(--notification-color,#227c74);
+  background-color: var(--border-color,#227c74);
   border-radius: 4px;
   color: #fff;
   padding: 1px 8px;
@@ -363,7 +365,7 @@ blockquote {
 }
 
 .box #languages {
-  margin-top: -25px;
+  margin-top: 0px; //-25px;
 }
 
 #language-skills .skill {
