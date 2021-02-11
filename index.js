@@ -194,8 +194,9 @@ function render(resumeObject) {
                 }
                 if (e.endDate) {
                     if (e.endDate.substr(0,4) === e.startDateYear) {
-                        e.endDateYear = ''
+                        e.endDateYear = '';
                         e.endDateMonth = '';
+                        e.endDateDoNotDisplay = true;
                     } else {
                         e.endDateYear = e.endDate.substr(0,4);
                         e.endDateMonth = getMonth(e.endDate || "", (resumeObject.meta && resumeObject.meta.language) || 'en')

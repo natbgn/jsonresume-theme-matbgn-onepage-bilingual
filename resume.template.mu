@@ -106,7 +106,7 @@
                   About
                 {{/languageEN}}
               </h2>
-              <p>{{{basics.summary}}}</p>
+              <p id="summary">{{{basics.summary}}}</p>
             </div>
           {{/basics.summary}}
           {{#workBool}}
@@ -225,7 +225,7 @@
               </h2>
               <ul class="list-group">
                 {{#languages}}
-                  <li class=" list-group-item">{{language}}<span class="skill badge pull-right">{{fluency}}</span></li>
+                  <li class="language-list list-group-item">{{language}}<span class="skill badge pull-right">{{fluency}}</span></li>
                 {{/languages}}
               </ul>
             </div>
@@ -273,8 +273,12 @@
               <ul id="education" class="clearfix">
                 {{#certifications}}
                   <li>
-                    <div class="year center">{{endDateYear}}
-                        <br>{{startDateYear}}
+                    <div class="year center">
+                        {{^endDateDoNotDisplay}}
+                          {{endDateYear}}
+                          <br>
+                        {{/endDateDoNotDisplay}}
+                        {{startDateYear}}
                     </div>
                     <div class="description pull-right">
                       <h3>{{institution}}</h3>
@@ -327,8 +331,13 @@
               <ul id="education" class="clearfix">
                 {{#education}}
                   <li>
-                    <div class="year center">{{endDateYear}} 
-                    <br>{{startDateYear}}</div>
+                    <div class="year center">
+                      {{^endDateDoNotDisplay}}
+                        {{endDateYear}}
+                        <br>
+                      {{/endDateDoNotDisplay}}
+                      {{startDateYear}}
+                    </div>
                     <div class="description pull-right">
                       <h3>{{institution}}</h3>
                       {{#studyType}}
@@ -380,7 +389,7 @@
               </h2>
               <ul class="list-group">
                 {{#languages}}
-                  <li class=" list-group-item">{{language}}<span class="skill badge pull-right">{{fluency}}</span></li>
+                  <li class="language-list list-group-item">{{language}}<span class="skill badge pull-right">{{fluency}}</span></li>
                 {{/languages}}
               </ul>
             </div>
