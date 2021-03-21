@@ -6,14 +6,24 @@
 @-o-viewport        { width: device-width; }
 @viewport           { width: device-width; }
 
+/* :root {
+  --primary-color:           #4A2C2A;
+  --secondary-color:         #9e8778;
+  --background-color:        #4d555e;
+  --header-background-color: #EEE;
+  --notification-color:      #DA680F;
+  --border-color:            #CCC;
+  --font-color:              #363636;
+} */
+
 :root {
-  --primary-color:         #4A2C2A; // #4d555e;
-  --secondary-color:         #9e8778; // #799915;
-  --background-color:        #4d555e; // #4d555e;
-  --header-background-color: #EEE;    // #EEE;
-  --notification-color:      #DA680F; // #BA2C45;
-  --border-color:            #CCC;    // #939393; 
-  --font-color:              #363636; // #363636; 
+  --primary-color:          #4d555e;
+  --secondary-color:        #799915;
+  --background-color:       #4d555e;
+  --header-background-color:#EEE;
+  --notification-color:     #BA2C45;
+  --border-color:           #939393; 
+  --font-color:             #363636; 
 }
 
 body {
