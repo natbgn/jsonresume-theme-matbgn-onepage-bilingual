@@ -139,17 +139,17 @@ function render(resumeObject) {
         resumeObject.languagesSideLeft = false;
     }
 
-    if (resumeObject.meta && resumeObject.meta.volonteerSide.length) {
-        if(resumeObject.meta.volonteerSide == 'right') {
-            resumeObject.volonteerSideRight = true;
-            resumeObject.volonteerSideLeft = false;
+    if (resumeObject.meta && resumeObject.meta.volunteerSide.length) {
+        if(resumeObject.meta.volunteerSide == 'right') {
+            resumeObject.volunteerSideRight = true;
+            resumeObject.volunteerSideLeft = false;
         } else {
-            resumeObject.volonteerSideRight = false;
-            resumeObject.volonteerSideLeft = true;
+            resumeObject.volunteerSideRight = false;
+            resumeObject.volunteerSideLeft = true;
         }
     } else {
-        resumeObject.volonteerSideRight = true
-        resumeObject.volonteerSideLeft = false;
+        resumeObject.volunteerSideRight = true
+        resumeObject.volunteerSideLeft = false;
     }
 
     if (resumeObject.work && resumeObject.work.length) {

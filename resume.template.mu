@@ -161,7 +161,7 @@
             </div>
           {{/workBool}}
           {{#volunteerBool}}
-          {{#volonteerSideLeft}}
+          {{#volunteerSideLeft}}
             <!-- VOLUNTEER CONDITIONNAL LEFT-->
             <div class="box">
               <h2><i class="fa fa-group ico"></i>
@@ -211,7 +211,7 @@
                 </div>
               {{/volunteer}}
             </div>
-          {{/volonteerSideLeft}}
+          {{/volunteerSideLeft}}
           {{/volunteerBool}}
           {{#languagesBool}}
           {{#languagesSideLeft}}
@@ -440,7 +440,7 @@
           {{/certificationsBeforeEducation}}
           {{/certificationsBool}}
           {{#volunteerBool}}
-          {{#volonteerSideRight}}
+          {{#volunteerSideRight}}
             <!-- VOLUNTEER CONDITIONNAL RIGHT-->
             <div class="box">
               <h2><i class="fa fa-group ico"></i>
@@ -490,7 +490,7 @@
                 </div>
               {{/volunteer}}
             </div>
-          {{/volonteerSideRight}}
+          {{/volunteerSideRight}}
           {{/volunteerBool}}
           {{#languagesBool}}
           {{#languagesSideRight}}
