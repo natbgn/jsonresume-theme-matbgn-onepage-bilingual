@@ -301,10 +301,10 @@
                       {{#educationCourses}}
                         <div>
                           {{#languageFR}}
-                            Cours
+                            Cours / Points marquants
                           {{/languageFR}}
                           {{#languageEN}}
-                            Courses
+                            Courses / Highlights
                           {{/languageEN}}
                         </div>
                         <ul class="list-group">
@@ -359,10 +359,10 @@
                       {{#educationCourses}}
                         <div>
                           {{#languageFR}}
-                            Cours
+                            Cours / Points marquants
                           {{/languageFR}}
                           {{#languageEN}}
-                            Courses
+                            Courses / Highlights
                           {{/languageEN}}
                         </div>
                         <ul class="list-group">
