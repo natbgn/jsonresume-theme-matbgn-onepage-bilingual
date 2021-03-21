@@ -262,7 +262,8 @@
             </div>
           {{/skillsBool}}
           {{#certificationsBool}}
-            <!-- CERTIFICATIONS -->
+          {{#certificationsBeforeEducation}}
+            <!-- CERTIFICATIONS CONDITIONAL BEFORE EDUCATION -->
             <div class="box">
               <h2><i class="fa fa-certificate ico"></i>
                 {{#languageFR}}
@@ -318,6 +319,7 @@
                 {{/certifications}}
               </ul>
             </div>
+          {{/certificationsBeforeEducation}}
           {{/certificationsBool}}
           {{#educationBool}}
             <!-- EDUCATION -->
@@ -377,6 +379,66 @@
               </ul>
             </div>
           {{/educationBool}}
+          {{#certificationsBool}}
+          {{^certificationsBeforeEducation}}
+            <!-- CERTIFICATIONS CONDITIONAL AFTER EDUCATION -->
+            <div class="box">
+              <h2><i class="fa fa-certificate ico"></i>
+                {{#languageFR}}
+                  Certifications
+                {{/languageFR}}
+                {{#languageEN}}
+                  Certifications
+                {{/languageEN}}
+              </h2>
+              <ul id="education" class="clearfix">
+                {{#certifications}}
+                  <li>
+                    <div class="year center">
+                        {{^endDateDoNotDisplay}}
+                          {{endDateYear}}
+                          <br>
+                        {{/endDateDoNotDisplay}}
+                        {{startDateYear}}
+                    </div>
+                    <div class="description pull-right">
+                      <h3>{{institution}}</h3>
+                      {{#studyType}}
+                        <p><i class="fa fa-graduation-cap ico"></i> {{studyType}}</p>
+                      {{/studyType}}
+                      <p>{{area}}</p>
+                      {{#gpa}}
+                        <p>
+                          {{#languageFR}}
+                            Note: {{gpa}}
+                          {{/languageFR}}
+                          {{#languageEN}}
+                            GPA: {{gpa}}
+                          {{/languageEN}}
+                        </p>
+                      {{/gpa}}
+                      {{#educationCourses}}
+                        <div>
+                          {{#languageFR}}
+                            Cours / Points marquants
+                          {{/languageFR}}
+                          {{#languageEN}}
+                            Courses / Highlights
+                          {{/languageEN}}
+                        </div>
+                        <ul class="list-group">
+                          {{#courses}}
+                            <li class="list-group-item">{{{.}}}</li>
+                          {{/courses}}
+                        </ul>
+                      {{/educationCourses}}
+                    </div>
+                  </li>
+                {{/certifications}}
+              </ul>
+            </div>
+          {{/certificationsBeforeEducation}}
+          {{/certificationsBool}}
           {{#volunteerBool}}
           {{#volonteerSideRight}}
             <!-- VOLUNTEER CONDITIONNAL RIGHT-->

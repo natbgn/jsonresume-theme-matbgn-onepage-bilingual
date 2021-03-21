@@ -52,6 +52,17 @@
       "courses": [
         "DB1101 - Basic SQL"
       ]
+    },
+    {
+        "institution": "School",
+        "area": "Fajitas Development",
+        "studyType": "Certification",
+        "startDate": "2011-01-01",
+        "endDate": "2013-01-01",
+        "gpa": "6.0",
+        "courses": [
+          "DB1102 - Fajitas"
+        ]
     }],
     "awards": [{
       "title": "Award",
@@ -96,6 +107,7 @@
         "lastModified": "",
         "language": "en",
         "languagesSide": "left",
-        "volonteerSide": "left"
+        "volonteerSide": "left",
+        "certificationsBeforeEducation": "false"
     }
   }

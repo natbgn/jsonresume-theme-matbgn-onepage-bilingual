@@ -116,6 +116,16 @@ function render(resumeObject) {
         resumeObject.languageFR = false;
     }
 
+    if (resumeObject.meta && resumeObject.meta.certificationsBeforeEducation.length) {
+        if(resumeObject.meta.certificationsBeforeEducation == 'true') {
+            resumeObject.certificationsBeforeEducation = true;
+        } else {
+            resumeObject.certificationsBeforeEducation = false;
+        }
+    } else {
+        resumeObject.certificationsBeforeEducation = false;
+    }
+
     if (resumeObject.meta && resumeObject.meta.languagesSide.length) {
         if(resumeObject.meta.languagesSide == 'right') {
             resumeObject.languagesSideRight = true;

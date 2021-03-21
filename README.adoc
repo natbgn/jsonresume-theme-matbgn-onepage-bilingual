@@ -96,17 +96,19 @@ To switch languages, simply add the following lines at the bottom of your resume
 
 ## Block flexibility
 
-The following blocks can either be printed on right or left side:
+The following blocks can either be printed on right or left side or relative to another:
 
 * languages
 * volonteer
+* certifications
 
 To switch sides, simply add the following lines at the bottom of your resume.json:
 
 ```
 "meta": {
-    "languagesSide": "left"
-    "volonteerSide": "right"
+    "languagesSide": "left",
+    "volonteerSide": "right",
+    "certificationsBeforeEducation": "true"
 }
 ```
 
