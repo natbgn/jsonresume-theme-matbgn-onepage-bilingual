@@ -116,7 +116,7 @@ function render(resumeObject) {
         resumeObject.languageFR = false;
     }
 
-    if (resumeObject.meta && resumeObject.meta.languagesSide) {
+    if (resumeObject.meta && resumeObject.meta.languagesSide.length) {
         if(resumeObject.meta.languagesSide == 'right') {
             resumeObject.languagesSideRight = true;
             resumeObject.languagesSideLeft = false;
@@ -127,6 +127,19 @@ function render(resumeObject) {
     } else {
         resumeObject.languagesSideRight = true
         resumeObject.languagesSideLeft = false;
+    }
+
+    if (resumeObject.meta && resumeObject.meta.volonteerSide.length) {
+        if(resumeObject.meta.volonteerSide == 'right') {
+            resumeObject.volonteerSideRight = true;
+            resumeObject.volonteerSideLeft = false;
+        } else {
+            resumeObject.volonteerSideRight = false;
+            resumeObject.volonteerSideLeft = true;
+        }
+    } else {
+        resumeObject.volonteerSideRight = true
+        resumeObject.volonteerSideLeft = false;
     }
 
     if (resumeObject.work && resumeObject.work.length) {

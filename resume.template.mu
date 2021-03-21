@@ -161,7 +161,8 @@
             </div>
           {{/workBool}}
           {{#volunteerBool}}
-            <!-- VOLUNTEER -->
+          {{#volonteerSideLeft}}
+            <!-- VOLUNTEER CONDITIONNAL LEFT-->
             <div class="box">
               <h2><i class="fa fa-group ico"></i>
                 {{#languageFR}}
@@ -210,6 +211,7 @@
                 </div>
               {{/volunteer}}
             </div>
+          {{/volonteerSideLeft}}
           {{/volunteerBool}}
           {{#languagesBool}}
           {{#languagesSideLeft}}
@@ -375,6 +377,59 @@
               </ul>
             </div>
           {{/educationBool}}
+          {{#volunteerBool}}
+          {{#volonteerSideRight}}
+            <!-- VOLUNTEER CONDITIONNAL RIGHT-->
+            <div class="box">
+              <h2><i class="fa fa-group ico"></i>
+                {{#languageFR}}
+                  Volontariat
+                {{/languageFR}}
+                {{#languageEN}}
+                  Volunteer
+                {{/languageEN}}
+              </h2>
+              {{#volunteer}}
+                <div class="job clearfix">
+                  <div class="row">
+                    <div class="details">
+                      <div class="where">{{organization}}</div>
+                      {{#website}}
+                        <div class="address">
+                          <a href="{{website}}" target="_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
+                        </div>
+                      {{/website}}
+                      <div class="year">{{startDateMonth}}{{startDateYear}} – {{endDateMonth}}{{endDateYear}}</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="job-details col-xs-11">
+                      <div class="profession">{{position}}</div>
+                      <div class="description">
+                        {{{summary}}}
+                        {{#boolHighlights}}
+                          <div class="highlights">
+                            {{#languageFR}}
+                              Points marquants
+                            {{/languageFR}}
+                            {{#languageEN}}
+                              Highlights
+                            {{/languageEN}}
+                          </div>
+                          <ul class="list-group">
+                            {{#highlights}}
+                              <li class="list-group-item">{{{.}}}</li>
+                            {{/highlights}}
+                          </ul>
+                        {{/boolHighlights}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {{/volunteer}}
+            </div>
+          {{/volonteerSideRight}}
+          {{/volunteerBool}}
           {{#languagesBool}}
           {{#languagesSideRight}}
             <!-- LANGUAGES CONDITIONNAL RIGHT-->

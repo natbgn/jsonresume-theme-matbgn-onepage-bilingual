@@ -49,6 +49,11 @@ While inside the theme folder, simply run:
 ```
 node export.js ~/path/to/your/resume.json
 ```
+e.g.
+```
+node export.js resume_demo.json
+```
+
 [NOTE]
 ====
 You could also place your resume.json in the root folder of this project and run:
@@ -94,12 +99,14 @@ To switch languages, simply add the following lines at the bottom of your resume
 The following blocks can either be printed on right or left side:
 
 * languages
+* volonteer
 
 To switch sides, simply add the following lines at the bottom of your resume.json:
 
 ```
 "meta": {
     "languagesSide": "left"
+    "volonteerSide": "right"
 }
 ```
 
