@@ -116,7 +116,7 @@ function render(resumeObject) {
         resumeObject.languageFR = false;
     }
 
-    if (resumeObject.meta && resumeObject.meta.certificationsBeforeEducation.length) {
+    if (resumeObject.meta && resumeObject.meta.certificationsBeforeEducation) {
         if(resumeObject.meta.certificationsBeforeEducation == 'true') {
             resumeObject.certificationsBeforeEducation = true;
         } else {
@@ -126,7 +126,7 @@ function render(resumeObject) {
         resumeObject.certificationsBeforeEducation = false;
     }
 
-    if (resumeObject.meta && resumeObject.meta.languagesSide.length) {
+    if (resumeObject.meta && resumeObject.meta.languagesSide) {
         if(resumeObject.meta.languagesSide == 'right') {
             resumeObject.languagesSideRight = true;
             resumeObject.languagesSideLeft = false;
@@ -139,7 +139,7 @@ function render(resumeObject) {
         resumeObject.languagesSideLeft = false;
     }
 
-    if (resumeObject.meta && resumeObject.meta.volunteerSide.length) {
+    if (resumeObject.meta && resumeObject.meta.volunteerSide) {
         if(resumeObject.meta.volunteerSide == 'right') {
             resumeObject.volunteerSideRight = true;
             resumeObject.volunteerSideLeft = false;
