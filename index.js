@@ -116,7 +116,7 @@ function render(resumeObject) {
         resumeObject.languageFR = false;
     }
 
-    if (resumeObject.meta && resumeObject.meta.certificationsBeforeEducation.length) {
+    if (resumeObject.meta && resumeObject.meta.certificationsBeforeEducation) {
         if(resumeObject.meta.certificationsBeforeEducation == 'true') {
             resumeObject.certificationsBeforeEducation = true;
         } else {
@@ -126,7 +126,7 @@ function render(resumeObject) {
         resumeObject.certificationsBeforeEducation = false;
     }
 
-    if (resumeObject.meta && resumeObject.meta.languagesSide.length) {
+    if (resumeObject.meta && resumeObject.meta.languagesSide) {
         if(resumeObject.meta.languagesSide == 'right') {
             resumeObject.languagesSideRight = true;
             resumeObject.languagesSideLeft = false;
@@ -139,17 +139,17 @@ function render(resumeObject) {
         resumeObject.languagesSideLeft = false;
     }
 
-    if (resumeObject.meta && resumeObject.meta.volonteerSide.length) {
-        if(resumeObject.meta.volonteerSide == 'right') {
-            resumeObject.volonteerSideRight = true;
-            resumeObject.volonteerSideLeft = false;
+    if (resumeObject.meta && resumeObject.meta.volunteerSide) {
+        if(resumeObject.meta.volunteerSide == 'right') {
+            resumeObject.volunteerSideRight = true;
+            resumeObject.volunteerSideLeft = false;
         } else {
-            resumeObject.volonteerSideRight = false;
-            resumeObject.volonteerSideLeft = true;
+            resumeObject.volunteerSideRight = false;
+            resumeObject.volunteerSideLeft = true;
         }
     } else {
-        resumeObject.volonteerSideRight = true
-        resumeObject.volonteerSideLeft = false;
+        resumeObject.volunteerSideRight = true
+        resumeObject.volunteerSideLeft = false;
     }
 
     if (resumeObject.work && resumeObject.work.length) {
@@ -171,6 +171,12 @@ function render(resumeObject) {
                     if (w.highlights[0] != "") {
                         w.boolHighlights = true;
                     }
+                }
+            }
+            if (w.meta) {
+                let contractType = w.meta.contract.toLowerCase().replace("-", " ").replace(/é/gi, "e")
+                if (contractType.includes("fixed term") || contractType.includes("cdd") || contractType.match(/ determine/g) != null) {
+                    w.boolFixedTermContract = true
                 }
             }
         });

@@ -29,7 +29,10 @@
       "summary": "Description...",
       "highlights": [
         "Started the company"
-      ]
+      ],
+      "meta": {
+        "contract": "contrat à durée déterminée"
+      }
     }],
     "volunteer": [{
       "organization": "Organization",
@@ -107,7 +110,7 @@
         "lastModified": "",
         "language": "en",
         "languagesSide": "left",
-        "volonteerSide": "left",
+        "volunteerSide": "left",
         "certificationsBeforeEducation": "false"
     }
   }
