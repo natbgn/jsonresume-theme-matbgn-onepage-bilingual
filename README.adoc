@@ -94,19 +94,16 @@ To switch languages, simply add the following lines at the bottom of your resume
 }
 ```
 
-## Mention of fixed-term contract
+## Mention of contract type
 
-To display a mention besides job dates, simply add one of the following keywords at the bottom of your specific work position:
-
-"fixed-term contract", "fixed term contract", "cdd", "contrat à durée déterminée"
-
-E.g.:
+To display a mention besides job dates, simply add the following lines at the bottom of your specific work position:
 
 ```
 "meta": {
-        "contract": "fixed-term contract"
-      }
+    "contractType": "Fixed-term contract"
+}
 ```
+NB: Fixed-term contract can be replaced by anything
 
 ## Block layout flexibility
 
