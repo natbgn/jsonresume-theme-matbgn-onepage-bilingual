@@ -124,7 +124,7 @@
                 <div class="job clearfix">
                   <div class="row">
                     <div class="details">
-                      <div class="where">{{company}}</div>
+                      <div class="where">{{position}} @ {{company}}</div>
                       {{#website}}
                         <div class="address">
                           <a href="{{website}}" target="_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
@@ -139,7 +139,7 @@
                   </div>
                   <div class="row">
                     <div class="job-details col-xs-11">
-                      <div class="profession">{{position}}</div>
+                      <!-- <div class="profession">{{position}}</div> -->
                       <div class="description">
                         {{{summary}}}
                         {{#boolHighlights}}
@@ -180,7 +180,7 @@
                 <div class="job clearfix">
                   <div class="row">
                     <div class="details">
-                      <div class="where">{{organization}}</div>
+                      <div class="where">{{position}} @ {{organization}}</div>
                       {{#website}}
                         <div class="address">
                           <a href="{{website}}" target="_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
@@ -191,7 +191,7 @@
                   </div>
                   <div class="row">
                     <div class="job-details col-xs-11">
-                      <div class="profession">{{position}}</div>
+                      <!-- <div class="profession">{{position}}</div> -->
                       <div class="description">
                         {{{summary}}}
                         {{#boolHighlights}}
@@ -459,7 +459,7 @@
                 <div class="job clearfix">
                   <div class="row">
                     <div class="details">
-                      <div class="where">{{organization}}</div>
+                      <div class="where">{{position}} @ {{organization}}</div>
                       {{#website}}
                         <div class="address">
                           <a href="{{website}}" target="_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
@@ -470,7 +470,7 @@
                   </div>
                   <div class="row">
                     <div class="job-details col-xs-11">
-                      <div class="profession">{{position}}</div>
+                      <!-- <div class="profession">{{position}}</div> -->
                       <div class="description">
                         {{{summary}}}
                         {{#boolHighlights}}
