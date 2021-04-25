@@ -124,7 +124,7 @@
                 <div class="job clearfix">
                   <div class="row">
                     <div class="details">
-                      <div class="where">{{position}} @ {{company}}</div>
+                      <div class="where">{{position}} ⠕ {{company}}</div>
                       {{#website}}
                         <div class="address">
                           <a href="{{website}}" target="_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
@@ -180,7 +180,7 @@
                 <div class="job clearfix">
                   <div class="row">
                     <div class="details">
-                      <div class="where">{{position}} @ {{organization}}</div>
+                      <div class="where">{{position}} ⠕ {{organization}}</div>
                       {{#website}}
                         <div class="address">
                           <a href="{{website}}" target="_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
@@ -459,7 +459,7 @@
                 <div class="job clearfix">
                   <div class="row">
                     <div class="details">
-                      <div class="where">{{position}} @ {{organization}}</div>
+                      <div class="where">{{position}} ⠕ {{organization}}</div>
                       {{#website}}
                         <div class="address">
                           <a href="{{website}}" target="_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
