@@ -130,7 +130,16 @@
                           <a href="{{website}}" target="_blank"><i class="fa fa-globe ico"></i> {{website}}</a>
                         </div>
                       {{/website}}
-                      <div class="year">{{startDateMonth}}{{startDateYear}} – {{endDateMonth}}{{endDateYear}}</div>
+                      <div class="year">{{startDateMonth}}{{startDateYear}} – {{endDateMonth}}{{endDateYear}}
+                        {{#boolFixedTermContract}}
+                          {{#languageFR}}
+                            | Contrat à durée déterminée
+                          {{/languageFR}}
+                          {{#languageEN}}
+                            | Fixed-term contract
+                          {{/languageEN}}
+                        {{/boolFixedTermContract}}
+                      </div>
                     </div>
                   </div>
                   <div class="row">

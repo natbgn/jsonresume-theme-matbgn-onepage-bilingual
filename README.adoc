@@ -94,7 +94,21 @@ To switch languages, simply add the following lines at the bottom of your resume
 }
 ```
 
-## Block flexibility
+## Mention of fixed-term contract
+
+To display a mention besides job dates, simply add one of the following keywords at the bottom of your specific work position:
+
+"fixed-term contract", "fixed term contract", "cdd", "contrat à durée déterminée"
+
+E.g.:
+
+```
+"meta": {
+        "contract": "fixed-term contract"
+      }
+```
+
+## Block layout flexibility
 
 The following blocks can either be printed on right or left side or relative to another:
 

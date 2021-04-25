@@ -173,6 +173,12 @@ function render(resumeObject) {
                     }
                 }
             }
+            if (w.meta) {
+                let contractType = w.meta.contract.toLowerCase().replace("-", " ").replace(/é/gi, "e")
+                if (contractType.includes("fixed term") || contractType.includes("cdd") || contractType.match(/ determine/g) != null) {
+                    w.boolFixedTermContract = true
+                }
+            }
         });
     }
 

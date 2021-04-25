@@ -29,7 +29,10 @@
       "summary": "Description...",
       "highlights": [
         "Started the company"
-      ]
+      ],
+      "meta": {
+        "contract": "contrat à durée déterminée"
+      }
     }],
     "volunteer": [{
       "organization": "Organization",
