@@ -131,14 +131,9 @@
                         </div>
                       {{/website}}
                       <div class="year">{{startDateMonth}}{{startDateYear}} – {{endDateMonth}}{{endDateYear}}
-                        {{#boolFixedTermContract}}
-                          {{#languageFR}}
-                            | Contrat à durée déterminée
-                          {{/languageFR}}
-                          {{#languageEN}}
-                            | Fixed-term contract
-                          {{/languageEN}}
-                        {{/boolFixedTermContract}}
+                        {{#boolContractType}}
+                            | {{meta.contractType}}
+                        {{/boolContractType}}
                       </div>
                     </div>
                   </div>
